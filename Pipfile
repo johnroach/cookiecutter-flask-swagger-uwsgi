@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+connexion = "*"
+
+[dev-packages]
+flask-testing = "*"
+coverage = "*"
+nose = "*"
+pluggy = "*"
+py = "*"
+randomize = "*"
+
+[requires]
+python_version = "3.6"
