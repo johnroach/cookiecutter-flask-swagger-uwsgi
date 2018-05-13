@@ -13,7 +13,7 @@ pipenv install
 For dev packages and testing you can run the following:
 
 ```
-pip install --dev
+pipenv install --dev
 ```
 
 # Running the flask application
