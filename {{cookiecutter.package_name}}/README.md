@@ -44,6 +44,10 @@ For example, on Ubuntu:
 
 ## Deployment
 
+```
+ make build-container version="1.0"
+```
+
 If you are interested in an out-of-the-box deployment automation, check out accompanying
 [`cookiecutter-flask-ansible`](https://github.com/candidtim/cookiecutter-flask-ansible).
 
