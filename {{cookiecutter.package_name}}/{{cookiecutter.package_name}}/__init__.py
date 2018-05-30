@@ -3,7 +3,9 @@ from flask import Flask
 
 app = Flask(__name__)
 app.config.from_object('{{cookiecutter.package_name}}.default_settings')
-app.config.from_envvar('{{cookiecutter.package_name.upper()}}_SETTINGS')
+# NOT SURE IF WE WOULD ACTUALLY BRING A FILE FOR CONFIGURATIONS I WOULD RATHER DO
+# THIS VIA ENVIRONMENT VARIABLES THAT GET INJECTED VIA KUBE FILES
+#app.config.from_envvar('{{cookiecutter.package_name.upper()}}_SETTINGS')
 
 if not app.debug:
     import logging

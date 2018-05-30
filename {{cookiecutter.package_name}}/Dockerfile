@@ -20,6 +20,6 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/v$ALPINE_VERSION/testing" > /etc/
   && pip install --upgrade pip \
   && if [[ ! -e /usr/bin/pip ]]; then ln -sf /usr/bin/pip3 /usr/bin/pip; fi
 
-COPY supervisord.conf /etc/supervisord.conf
 COPY dist/{{cookiecutter.package_name}}/ /app
+
 CMD ["pipenv run uwsgi --http-socket 127.0.0.1:5000 --plugins python3 --module {{cookiecutter.package_name}}:app"]
