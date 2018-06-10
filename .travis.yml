@@ -13,7 +13,6 @@ env:
 install:
   - pip install pipenv
   - pipenv install --dev --three
-  - pipenv shell -c
 # command to run tests
 script:
   - pipenv run cookiecutter . --output-dir /tmp --no-input && cd /tmp/yourapplication && make test
