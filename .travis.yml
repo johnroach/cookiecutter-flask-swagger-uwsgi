@@ -16,6 +16,4 @@ install:
   - pipenv shell -c
 # command to run tests
 script:
-  - pipenv run cookiecutter . --output-dir /tmp --no-input && \
-	cd /tmp/yourapplication && \
-	make test
+  - pipenv run cookiecutter . --output-dir /tmp --no-input && cd /tmp/yourapplication && make test
