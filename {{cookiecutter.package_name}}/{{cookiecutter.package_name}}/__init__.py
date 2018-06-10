@@ -2,6 +2,7 @@ import os
 from flask import Flask
 from logging.config import dictConfig
 
+# Logging configurations
 dictConfig({
     'version': 1,
     'formatters': {'default': {
