@@ -12,7 +12,10 @@ env:
 # command to install dependencies
 install:
   - pip install pipenv
-  - pipenv install
+  - pipenv install --dev --three
+  - pipenv shell -c
 # command to run tests
 script:
-  - make
+  - pipenv run cookiecutter . --output-dir /tmp --no-input && \
+	cd /tmp/yourapplication && \
+	make test
