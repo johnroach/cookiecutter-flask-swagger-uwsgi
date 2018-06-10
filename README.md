@@ -1,5 +1,7 @@
 # flask-swagger-uwsgi
 
+[![Build Status](https://travis-ci.org/JohnRoach/cookiecutter-flask-swagger-uwsgi.svg?branch=master)](https://travis-ci.org/JohnRoach/cookiecutter-flask-swagger-uwsgi)
+
 This is an **opinionated** [Flask](http://flask.pocoo.org) project. It is meant to be used with Kubernetes type orchestration solutions as well as API Gateway solutions that will use Open API specification(formerly known as Swagger).
 
 
