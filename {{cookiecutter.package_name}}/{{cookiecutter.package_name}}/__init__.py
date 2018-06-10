@@ -24,7 +24,4 @@ app.config.from_object('{{cookiecutter.package_name}}.default_settings')
 # THIS VIA ENVIRONMENT VARIABLES THAT GET INJECTED VIA KUBE FILES
 #app.config.from_envvar('{{cookiecutter.package_name.upper()}}_SETTINGS')
 
-if not app.debug:
-
-
 import {{cookiecutter.package_name}}.views
