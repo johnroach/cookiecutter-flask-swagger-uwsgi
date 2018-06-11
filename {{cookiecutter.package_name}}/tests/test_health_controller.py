@@ -1,17 +1,14 @@
-import unittest
+from unittest import TestCase
 
-import {{cookiecutter.package_name}}
+from {{cookiecutter.package_name}}.controllers.health_controller import HealthController
 
-
-class {{cookiecutter.package_name.capitalize()}}TestCase(unittest.TestCase):
+class TestHealthController(TestCase):
 
     def setUp(self):
-        self.app = {{cookiecutter.package_name}}.app.test_client()
+        self.health_controller = HealthController()
 
-    def test_index(self):
-        rv = self.app.get('/')
-        self.assertIn('Welcome to {{cookiecutter.application_name}}', rv.data.decode())
+    def test_live_status(self):
+        self.assertEqual(self.health_controller.live(), 'OK')
 
-
-if __name__ == '__main__':
-    unittest.main()
+    def test_ready_status(self):
+        self.assertEqual(self.health_controller.ready(), 'OK')

@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/JohnRoach/cookiecutter-flask-swagger-uwsgi.svg?branch=master)](https://travis-ci.org/JohnRoach/cookiecutter-flask-swagger-uwsgi)
 
-This is an **opinionated** [Flask](http://flask.pocoo.org) project. It is meant to be used with Kubernetes type orchestration solutions as well as API Gateway solutions that will use Open API specification(formerly known as Swagger).
+This is an **opinionated** [Flask](http://flask.pocoo.org) based project. It is meant to be used with Kubernetes type orchestration solutions as well as API Gateway solutions that will use Open API 2.0 specification(formerly known as Swagger).
 
 
 ## Usage
@@ -20,7 +20,7 @@ All set! Run the application:
     cd yourapplication
     make run
 
-And then open it at [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+And then open it at [http://127.0.0.1:3040/](http://127.0.0.1:3040/)
 
 
 ## Features

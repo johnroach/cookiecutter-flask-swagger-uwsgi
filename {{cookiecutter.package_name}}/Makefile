@@ -7,7 +7,7 @@ venv:
 	cd ..;pipenv --three --bare install -e {{cookiecutter.package_name}}
 
 run: venv
-	export FLASK_APP={{cookiecutter.package_name}}; {{cookiecutter.package_name.upper()}}_SETTINGS=../settings.cfg pipenv --bare run flask run
+	export FLASK_APP={{cookiecutter.package_name}}; {{cookiecutter.package_name.upper()}}_SETTINGS=../settings.cfg; pipenv --bare run python -m {{cookiecutter.package_name}}
 
 test: venv
 	cd ..; {{cookiecutter.package_name.upper()}}_SETTINGS=../settings.cfg pipenv --bare run python -m unittest discover -s tests

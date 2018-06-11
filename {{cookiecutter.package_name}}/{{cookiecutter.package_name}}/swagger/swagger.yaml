@@ -1,0 +1,54 @@
+---
+swagger: "2.0"
+info:
+  description: "API Swagger doc"
+  version: "1.0.0"
+  title: "{{ cookiecutter.package_name }}"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "apiteam@swagger.io"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "0.0.0.0:3040"
+basePath: "/"
+tags:
+- name: "live"
+  description: "liveness"
+  externalDocs:
+    description: "Find out more"
+    url: "http://swagger.io"
+- name: "ready"
+  description: "readyness"
+  externalDocs:
+    description: "Find out more"
+    url: "http://swagger.io"
+
+schemes:
+- "http"
+
+paths:
+  "/live":
+    "get":
+      tags:
+      - "live"
+      operationId: "{{ cookiecutter.package_name }}.routes.live"
+      summary: "This checks the health of the api"
+      description: "Health check status. This is used for kubernetes health checks."
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "This means all is OK"
+  "/ready":
+    "get":
+      tags:
+      - "ready"
+      operationId: "{{ cookiecutter.package_name }}.routes.ready"
+      summary: "This checks the readiness status of the api"
+      description: "Readiness check status. This is used for kubernetes readiness checks."
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "This means all is OK"
