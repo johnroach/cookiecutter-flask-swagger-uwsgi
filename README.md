@@ -27,7 +27,7 @@ And then open it at [http://127.0.0.1:3040/](http://127.0.0.1:3040/)
 
 Included:
 
- - production-ready Flask application: root package, sample static resource, sample template and an index view,
+ - production-ready Connexion application: root package, sample static resource, sample template and an index view,
    as per [Larger Applications](http://flask.pocoo.org/docs/0.12/patterns/packages/)
 
  - Docker file with uwsgi setup
@@ -44,16 +44,14 @@ Included:
 
  - Makefile with few typical tasks automated (see generated README for details)
 
-Not included:
-
- - everything else: there is no SQLAlchemy, or MongoKit, or Bootstrap CSS, or React, or whatever else here;
-   it is up to you to chose how to implement your application
-
-
 # Contributions
 
-If you do a change, use `make test` from root directory to test the updated template.
+Please read the CONTRIBUTING.md document. If you do a change, use `make test` from root directory to test the updated template.
 
 
 # Possible future improvements
- - find a cross-platform replacement to a Makefile
+ - Fix issue with swagger-ui
+ - Nail down the uwsgi configurations to be more production ready
+ - Harden the docker container
+ - Find a cross-platform replacement to a Makefile
+ 
