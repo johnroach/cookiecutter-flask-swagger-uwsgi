@@ -13,7 +13,7 @@ test: venv
 	cd ..; {{cookiecutter.package_name.upper()}}_SETTINGS=../settings.cfg pipenv --bare run python -m unittest discover -s tests
 
 sdist: venv test
-	pipenv --bare run python setup.py sdist
+	rm -rf dist; pipenv --bare run python setup.py sdist
 
 build-container: sdist
 	cd dist;tar -xvf {{cookiecutter.package_name}}-$(version).tar.gz; \

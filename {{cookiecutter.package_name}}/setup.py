@@ -9,5 +9,6 @@ setup(
     zip_safe=False,
     install_requires=[
         'connexion',
+        'uwsgi'
     ],
 )
